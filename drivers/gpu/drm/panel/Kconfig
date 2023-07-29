@@ -802,6 +802,18 @@ config DRM_PANEL_VISIONOX_R66451
 	  Say Y here if you want to enable support for Visionox
 	  R66451 1080x2340 AMOLED DSI panel.
 
+config DRM_PANEL_XIAOMI_EA8182
+	tristate "Xiaomi Mi 11 Ultra ea8182 DSI cmd mode panel"
+	depends on OF
+	depends on DRM_MIPI_DSI
+	depends on BACKLIGHT_CLASS_DEVICE
+	help
+	  Say Y here if you want to enable support for the Xiaomi
+	  Mi 11 Ultra 2k 6.81" OLED DSI cmd mode panels produced by
+	  Samsung.
+
+	  This Driver-IC uses Display Stream Compression 1.1.
+
 config DRM_PANEL_WIDECHIPS_WS2401
 	tristate "Widechips WS2401 DPI panel driver"
 	depends on SPI && GPIOLIB
